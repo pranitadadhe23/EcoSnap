@@ -1,0 +1,10 @@
+apple_pie
+caesar_salad
+cheese_plate
+chicken_curry
+chocolate_cake
+club_sandwich
+hamburger
+hot_and_sour_soup
+pizza
+ice_cream
