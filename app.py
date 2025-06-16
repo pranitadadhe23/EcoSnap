@@ -16,6 +16,7 @@ with open("data/class_names.txt") as f:
 carbon_df = pd.read_csv("data/carbon_data.csv")
 carbon_df["Food"] = carbon_df["Food"].astype(str).str.strip().str.lower()
 
+
 def predict(img):
     img = img.resize((224, 224))
     x = np.expand_dims(np.array(img), axis=0)
@@ -25,17 +26,19 @@ def predict(img):
     return class_names[idx].strip().lower()
 
 def get_carbon_info(label):
-    df = pd.read_csv("data/carbon_data.csv")
-    df["Food"] = df["Food"].str.strip().str.lower()  # Clean and normalize CSV entries
-    label_clean = label.lower().replace(" ", "_").strip()  # Normalize model output
-    row = df[df["Food"] == label_clean]
-    
-    if not row.empty:
-        co2 = row["CO2_per_kg"].values[0]
-        tip = row["Tip"].values[0]
-        return co2, tip
+    label_clean = label.strip().lower()
+
+    # Match with cleaned Food column
+    match = carbon_df[carbon_df["Food"] == label_clean]
+
+    if not match.empty:
+        return match.iloc[0]["CO2_per_kg"], match.iloc[0]["Tip"]
     else:
+        print(f"Label '{label_clean}' not found in:", list(carbon_df["Food"]))
         return None, None
+
+
+
 
 # Streamlit UI
 st.set_page_config(page_title="EcoSnap 🌱")
