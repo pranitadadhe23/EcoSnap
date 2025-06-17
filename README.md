@@ -1,4 +1,4 @@
-# 🌱 EcoSnap – AI Food Classifier with Carbon Estimator
+# 🌱 EcoSnap – AI Food Classifier with Carbon Estimator 🌱
 
 EcoSnap is a Streamlit-powered AI application that identifies food items from images and estimates their carbon footprint based on sustainable consumption data. The goal is to raise environmental awareness and promote eco-friendly food choices through visual interaction and AI.
 
