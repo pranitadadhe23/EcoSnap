@@ -16,23 +16,23 @@ EcoSnap is a Streamlit-powered AI application that identifies food items from im
 
 ## 🗂️ Project Structure
 
-EcoSnap/ 
-│
-├── app.py # Streamlit web app 
-├── train_model.ipynb # Jupyter notebook for model training 
-├── requirements.txt # Python dependencies 
-│
-├── data/ 
-│ ├── carbon_data.csv # CSV with food, CO₂ footprint, and tips 
-│ └── class_names.txt # Class labels for model output 
-│
-├── dataset/ # Image dataset for training (one folder per class) 
-│ ├── apple_pie/ 
-│ ├── caesar_salad/ 
-│ └── ... 
-│
-└── model/ 
-└── food_model.h5 # Trained Keras model 
+EcoSnap/  
+│  
+├── app.py # Streamlit web app  
+├── train_model.ipynb # Jupyter notebook for model training  
+├── requirements.txt # Python dependencies  
+│  
+├── data/  
+│ ├── carbon_data.csv # CSV with food, CO₂ footprint, and tips  
+│ └── class_names.txt # Class labels for model output  
+│  
+├── dataset/ # Image dataset for training (one folder per class)  
+│ ├── apple_pie/  
+│ ├── caesar_salad/  
+│ └── ...  
+│  
+└── model/  
+└── food_model.h5 # Trained Keras model  
 
 ## 🚀 Getting Started
 
